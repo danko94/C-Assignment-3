@@ -3,34 +3,6 @@
 
 #include <stdio.h>
 
-int getLine(char s [])
-{
-    char check [LINE] ; 
-    int i = 0;
-    for (i = 0; s[i] != '\n'; i++)
-    {
-        check[i] = s[i];
-    }
-    check[++i] = 0;
-
-    return i-1;
-    
-    
-}
-
-int getWord(char s [])
-{
-    char word [WORD];
-    int wordCount = 0;
-    int i = 0;
-    for (i = 0; s[i] != '\n'; i++)
-    {
-        if(s[i]==' '|s[i]=='\t')
-            wordCount++;
-    }
-    return wordCount+1;
-
-}
 
 int substring( char * str1, char * str2)
 {
@@ -97,7 +69,6 @@ int similar (char *s, char *t, int n)
 void print_lines(char* keyWord)
 {
     char line [LINE];
-    char word [WORD];
     while (scanf("%[^\n]%*c", line)!=EOF)
     {
         if (substring(line, keyWord))

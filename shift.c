@@ -57,7 +57,7 @@ void insertion_sort(int* arr, int len)
 
 int main()
 {
-    int arr[ARR_SIZE];
+    int arr[ARR_SIZE] = {0};
     for (int i = 0; i < ARR_SIZE; i++)
     {
         if(scanf("%d", arr+i)==EOF)
