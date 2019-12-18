@@ -6,13 +6,11 @@
 
 void shift_element(int* arr, int i)
 {
-    int* ptr = arr;
-    arr+=i+1;
+    arr+=i;
     for(;i>0;i--){
         *arr=*(arr-1);
         arr--;
     }
-    arr = ptr;
 }
 
 void printArray(int arr[], int n) 
@@ -49,7 +47,7 @@ void insertion_sort(int* arr, int len)
 				j++;
 			}
 			
-            shift_element(arr+j-1, i-j);		
+            shift_element(arr+j, i-j);		
 			*(arr+j)=key;
 		} 
 }
@@ -57,6 +55,9 @@ void insertion_sort(int* arr, int len)
 
 int main()
 {
+    int ar[] = {2,1,5,4,3};
+    shift_element(ar, 2);
+    printArray(ar, 5);
     int arr[ARR_SIZE] = {0};
     for (int i = 0; i < ARR_SIZE; i++)
     {
@@ -68,7 +69,7 @@ int main()
     ptr_arr = arr;
     
 	int n = sizeof(arr) / sizeof(*ptr_arr); 
-    printf("%d\n", n);
+    //printf("%d\n", n);
 	insertion_sort(arr, n); 
 	printArray(arr, n); 
 }
