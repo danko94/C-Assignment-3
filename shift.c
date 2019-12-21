@@ -55,9 +55,6 @@ void insertion_sort(int* arr, int len)
 
 int main()
 {
-    int ar[] = {2,1,5,4,3};
-    shift_element(ar, 2);
-    printArray(ar, 5);
     int arr[ARR_SIZE] = {0};
     for (int i = 0; i < ARR_SIZE; i++)
     {
@@ -69,7 +66,6 @@ int main()
     ptr_arr = arr;
     
 	int n = sizeof(arr) / sizeof(*ptr_arr); 
-    //printf("%d\n", n);
 	insertion_sort(arr, n); 
 	printArray(arr, n); 
 }
